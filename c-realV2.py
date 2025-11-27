@@ -79,14 +79,9 @@ def exit():
 
 def banner():
     """Handler for non-unicode consoles"""
-    sys.stdout.buffer.write(f'''\
- ██████╗                  ██████╗ ███████╗ █████╗ ██╗     
-██╔════╝                  ██╔══██╗██╔════╝██╔══██╗██║   Version: {__VERSION__}
-██║         █████╗        ██████╔╝█████╗  ███████║██║     Made by:
-██║         ╚════╝        ██╔══██╗██╔══╝  ██╔══██║██║       TKperson
-╚██████╗                  ██║  ██║███████╗██║  ██║███████╗    and
- ╚═════╝                  ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝╚══════╝      cyxl
-'''.encode('utf8'))
+    sys.stdout.buffer.write(f'''\     
+    Version: {__VERSION__}
+    '''.encode('utf8'))
 
 # Check for > 1.5.1 discord version
 if version.parse('1.5.1') > version.parse(discord.__version__):
@@ -262,7 +257,7 @@ checkToken()
 
 ### check updates
 print('Checking update...           ', end='\r')
-github_version = requests.get('https://raw.githubusercontent.com/TKperson/Nuking-Discord-Server-Bot-Nuke-Bot/master/VERSION.txt').text
+github_version = requests.get('https://raw.githubusercontent.com/developer51709/Nuking-Discord-Server-Bot-Nuke-Bot/master/VERSION.txt').text
 if version.parse(github_version) > version.parse(__VERSION__):
     print(f'New C-REAL update has been launched -> {github_version} <- :party:')
 
