@@ -301,7 +301,7 @@ async def on_connect():
 @client.event
 async def on_ready():
     banner()
-    print('/+========================================================')
+    print('/+================================================')
     print(f'| | {Fore.GREEN}Bot ready.')
     print(f'| {Fore.MAGENTA}+ Logged in as')
     print(f'| | {client.user.name}#{client.user.discriminator}')
